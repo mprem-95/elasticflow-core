@@ -1,0 +1,14 @@
+[2019-10-20 03:11:22,357] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.Prediction 2019-10-19T21:40:14+00:00 [queued]>
+[2019-10-20 03:11:22,365] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.Prediction 2019-10-19T21:40:14+00:00 [queued]>
+[2019-10-20 03:11:22,365] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 03:11:22,365] {taskinstance.py:839} INFO - Starting attempt 1 of 4
+[2019-10-20 03:11:22,365] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 03:11:22,370] {taskinstance.py:859} INFO - Executing <Task(Predictor): Prediction> on 2019-10-19T21:40:14+00:00
+[2019-10-20 03:11:22,370] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'ElasticFlow', 'Prediction', '2019-10-19T21:40:14+00:00', '--job_id', '8', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmpi7unagqi']
+[2019-10-20 03:11:23,128] {base_task_runner.py:115} INFO - Job 8: Subtask Prediction [2019-10-20 03:11:23,128] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 03:11:23,526] {base_task_runner.py:115} INFO - Job 8: Subtask Prediction [2019-10-20 03:11:23,526] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 03:11:23,555] {base_task_runner.py:115} INFO - Job 8: Subtask Prediction [2019-10-20 03:11:23,554] {cli.py:516} INFO - Running <TaskInstance: ElasticFlow.Prediction 2019-10-19T21:40:14+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 03:11:23,563] {logging_mixin.py:95} INFO - [[34m2019-10-20 03:11:23,563[0m] {[34mPredictorPlugin.py:[0m19} INFO[0m - Predictor Initiated[0m
+[2019-10-20 03:11:27,361] {logging_mixin.py:95} INFO - [[34m2019-10-20 03:11:27,361[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

@@ -1,0 +1,13 @@
+[2019-10-20 01:38:08,340] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: DataCollector_v0.1.apmc_initiate 2019-10-19T20:07:55.656901+00:00 [queued]>
+[2019-10-20 01:38:08,347] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: DataCollector_v0.1.apmc_initiate 2019-10-19T20:07:55.656901+00:00 [queued]>
+[2019-10-20 01:38:08,347] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 01:38:08,347] {taskinstance.py:839} INFO - Starting attempt 1 of 4
+[2019-10-20 01:38:08,347] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 01:38:08,353] {taskinstance.py:859} INFO - Executing <Task(DummyOperator): apmc_initiate> on 2019-10-19T20:07:55.656901+00:00
+[2019-10-20 01:38:08,353] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'DataCollector_v0.1', 'apmc_initiate', '2019-10-19T20:07:55.656901+00:00', '--job_id', '10', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmpuow1iwlg']
+[2019-10-20 01:38:09,116] {base_task_runner.py:115} INFO - Job 10: Subtask apmc_initiate [2019-10-20 01:38:09,115] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 01:38:09,580] {base_task_runner.py:115} INFO - Job 10: Subtask apmc_initiate [2019-10-20 01:38:09,580] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 01:38:09,609] {base_task_runner.py:115} INFO - Job 10: Subtask apmc_initiate [2019-10-20 01:38:09,609] {cli.py:516} INFO - Running <TaskInstance: DataCollector_v0.1.apmc_initiate 2019-10-19T20:07:55.656901+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 01:38:13,344] {logging_mixin.py:95} INFO - [[34m2019-10-20 01:38:13,343[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

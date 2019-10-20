@@ -1,0 +1,452 @@
+[2019-10-20 04:53:54,416] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.news_parser 2019-10-19T23:23:04+00:00 [queued]>
+[2019-10-20 04:53:54,423] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.news_parser 2019-10-19T23:23:04+00:00 [queued]>
+[2019-10-20 04:53:54,423] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 04:53:54,423] {taskinstance.py:839} INFO - Starting attempt 1 of 4
+[2019-10-20 04:53:54,423] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 04:53:54,428] {taskinstance.py:859} INFO - Executing <Task(NewsParser): news_parser> on 2019-10-19T23:23:04+00:00
+[2019-10-20 04:53:54,428] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'ElasticFlow', 'news_parser', '2019-10-19T23:23:04+00:00', '--job_id', '8', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmp1gufb7az']
+[2019-10-20 04:53:55,001] {base_task_runner.py:115} INFO - Job 8: Subtask news_parser [2019-10-20 04:53:55,000] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 04:53:55,325] {base_task_runner.py:115} INFO - Job 8: Subtask news_parser [2019-10-20 04:53:55,324] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 04:53:55,358] {base_task_runner.py:115} INFO - Job 8: Subtask news_parser [2019-10-20 04:53:55,358] {cli.py:516} INFO - Running <TaskInstance: ElasticFlow.news_parser 2019-10-19T23:23:04+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 04:53:55,371] {logging_mixin.py:95} INFO - [[34m2019-10-20 04:53:55,371[0m] {[34mDataParserPlugin.py:[0m36} INFO[0m - NewsParser Initiated[0m
+[2019-10-20 04:53:55,374] {logging_mixin.py:95} INFO - [[34m2019-10-20 04:53:55,374[0m] {[34mDataParserPlugin.py:[0m54} INFO[0m - {
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - WHEAT",
+    "totalResults": "27200",
+    "searchTerms": "WHEAT",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:td1nwbjybsn"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - WHEAT",
+    "totalResults": "27200",
+    "searchTerms": "WHEAT",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:td1nwbjybsn"
+   }
+  ]
+ },
+ "context": {
+  "title": "news"
+ },
+ "searchInformation": {
+  "searchTime": 0.26241,
+  "formattedSearchTime": "0.26",
+  "totalResults": "27200",
+  "formattedTotalResults": "27,200"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Wheat Front Month Futures price information - FT.com",
+   "htmlTitle": "\u003cb\u003eWheat\u003c/b\u003e Front Month Futures price information - FT.com",
+   "link": "https://markets.ft.com/data/commodities/tearsheet/summary?c=Wheat",
+   "displayLink": "markets.ft.com",
+   "snippet": "Wheat Front Month Futures price information, historical data, charts, stats and \nmore.",
+   "htmlSnippet": "\u003cb\u003eWheat\u003c/b\u003e Front Month Futures price information, historical data, charts, stats and \u003cbr\u003e\nmore.",
+   "cacheId": "dc7bQQ7bLmQJ",
+   "formattedUrl": "https://markets.ft.com/data/commodities/tearsheet/summary?...Wheat",
+   "htmlFormattedUrl": "https://markets.ft.com/data/commodities/tearsheet/summary?...\u003cb\u003eWheat\u003c/b\u003e",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Food groups' fight over wheat manipulation re-erupts | Financial Times",
+   "htmlTitle": "Food groups&#39; fight over \u003cb\u003ewheat\u003c/b\u003e manipulation re-erupts | Financial Times",
+   "link": "https://www.ft.com/content/822e05bc-bf88-11e9-b350-db00d509634e",
+   "displayLink": "www.ft.com",
+   "snippet": "Aug 15, 2019 ... CFTC in legal tussle with Mondelez and Kraft Heinz over gag order on $16m \nsettlement.",
+   "htmlSnippet": "Aug 15, 2019 \u003cb\u003e...\u003c/b\u003e CFTC in legal tussle with Mondelez and Kraft Heinz over gag order on $16m \u003cbr\u003e\nsettlement.",
+   "formattedUrl": "https://www.ft.com/content/822e05bc-bf88-11e9-b350-db00d509634e",
+   "htmlFormattedUrl": "https://www.ft.com/content/822e05bc-bf88-11e9-b350-db00d509634e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxACZbDIGC_HPd9fVf-qUEXPx1_PPC9crs2__Pt4rDSrdllR4ndgx5fsR"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#333333",
+      "msapplication-tilecolor": "#fff1e0",
+      "msapplication-tileimage": "https://www.ft.com/__assets/creatives/brand-ft/icons/v3/mstile-144x144.png",
+      "og:title": "Food groups’ fight over wheat manipulation re-erupts",
+      "og:description": "CFTC in legal tussle with Mondelez and Kraft Heinz over gag order on $16m settlement",
+      "og:image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fb3f52fd0-bf92-11e9-9381-78bab8a70848?source=next-opengraph&fit=scale-down&width=900",
+      "og:url": "https://www.ft.com/content/822e05bc-bf88-11e9-b350-db00d509634e",
+      "og:type": "article",
+      "article:published_time": "2019-08-15T19:46:57.000Z",
+      "article:modified_time": "2019-08-15T22:58:06.000Z",
+      "article:author": "Gregory Meyer",
+      "og:locale": "en_GB",
+      "og:site_name": "Financial Times",
+      "fb:pages": "8860325749",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@FinancialTimes"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fb3f52fd0-bf92-11e9-9381-78bab8a70848?source=next-opengraph&fit=scale-down&width=900"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Australia to import wheat for first time in a decade | Financial Times",
+   "htmlTitle": "Australia to import \u003cb\u003ewheat\u003c/b\u003e for first time in a decade | Financial Times",
+   "link": "https://www.ft.com/content/5d82576c-76c3-11e9-be7d-6d846537acab",
+   "displayLink": "www.ft.com",
+   "snippet": "May 14, 2019 ... Australian authorities have approved the first bulk import of foreign wheat in more \nthan a decade, as a devastating two-year drought continues ...",
+   "htmlSnippet": "May 14, 2019 \u003cb\u003e...\u003c/b\u003e Australian authorities have approved the first bulk import of foreign \u003cb\u003ewheat\u003c/b\u003e in more \u003cbr\u003e\nthan a decade, as a devastating two-year drought continues&nbsp;...",
+   "formattedUrl": "https://www.ft.com/content/5d82576c-76c3-11e9-be7d-6d846537acab",
+   "htmlFormattedUrl": "https://www.ft.com/content/5d82576c-76c3-11e9-be7d-6d846537acab",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzayb1-IggkBXjO2KuaEHw0RMW4QQ1KDhnAvsK8xs6H1_hfa0wO4QgK8c"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#333333",
+      "msapplication-tilecolor": "#fff1e0",
+      "msapplication-tileimage": "https://www.ft.com/__assets/creatives/brand-ft/icons/v3/mstile-144x144.png",
+      "og:title": "Australia to import wheat for first time in a decade",
+      "og:description": "Move comes as severe 2-year drought continues to plague country",
+      "og:image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fec9df4a6-76cd-11e9-b0ec-7dff87b9a4a2?source=next-opengraph&fit=scale-down&width=900",
+      "og:url": "https://www.ft.com/content/5d82576c-76c3-11e9-be7d-6d846537acab",
+      "og:type": "article",
+      "article:published_time": "2019-05-15T05:11:40.000Z",
+      "article:modified_time": "2019-05-15T05:11:40.000Z",
+      "article:author": "Jamie Smyth",
+      "og:locale": "en_GB",
+      "og:site_name": "Financial Times",
+      "fb:pages": "8860325749",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@FinancialTimes"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fec9df4a6-76cd-11e9-b0ec-7dff87b9a4a2?source=next-opengraph&fit=scale-down&width=900"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "US, Canadian Spring Wheat Quality Hurt by Wet Harvest Conditions",
+   "htmlTitle": "US, Canadian Spring \u003cb\u003eWheat\u003c/b\u003e Quality Hurt by Wet Harvest Conditions",
+   "link": "https://www.agriculture.com/markets/newswire/us-canadian-spring-wheat-quality-hurt-by-wet-harvest-conditions",
+   "displayLink": "www.agriculture.com",
+   "snippet": "Sep 20, 2019 ... Excessively wet conditions in the northern U.S. Plains and Canadian Prairies \nhave hurt the quality of the region's spring and durum wheat ...",
+   "htmlSnippet": "Sep 20, 2019 \u003cb\u003e...\u003c/b\u003e Excessively wet conditions in the northern U.S. Plains and Canadian Prairies \u003cbr\u003e\nhave hurt the quality of the region&#39;s spring and durum \u003cb\u003ewheat\u003c/b\u003e&nbsp;...",
+   "cacheId": "dBwz-3Sw-HUJ",
+   "formattedUrl": "https://www.agriculture.com/.../us-canadian-spring-wheat-quality-hurt-by-wet -harvest-conditions",
+   "htmlFormattedUrl": "https://www.agriculture.com/.../us-canadian-spring-\u003cb\u003ewheat\u003c/b\u003e-quality-hurt-by-wet -harvest-conditions",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSNfMwJNAc5YuYalNBLSKXMvBt_nULC9fJTZdp3jzauoe8QBIo6Ht9gH5M"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "fb:app_id": "1545978839053740",
+      "fb:pages": "116073665214311",
+      "og:site_name": "Successful Farming",
+      "og:type": "article",
+      "og:url": "https://www.agriculture.com/markets/newswire/us-canadian-spring-wheat-quality-hurt-by-wet-harvest-conditions",
+      "og:title": "U.S., Canadian Spring Wheat Quality Hurt by Wet Harvest Conditions",
+      "og:description": "Excessively wet conditions in the northern U.S. Plains and Canadian Prairies have hurt the quality of the region's spring and durum wheat crops, potentially tightening supplies of top grades of the grains, handlers and agronomists said.",
+      "og:updated_time": "2019-09-20T13:47:12-05:00",
+      "og:image": "https://images.agriculture.mdpcdn.com/sites/default/files/styles/width_550/public/image/2019/08/16/48543222132_ff13303e04_o%20%281%29.jpg",
+      "article:published_time": "2019-09-20T13:26:55-05:00",
+      "article:modified_time": "2019-09-20T13:47:12-05:00"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images.agriculture.mdpcdn.com/sites/default/files/styles/width_550/public/image/2019/08/16/48543222132_ff13303e04_o%20%281%29.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Wheat price falls to lowest level in a decade | Financial Times",
+   "htmlTitle": "\u003cb\u003eWheat\u003c/b\u003e price falls to lowest level in a decade | Financial Times",
+   "link": "https://www.ft.com/content/75fdb856-6b0c-11e6-ae5b-a7cc5dd5a28c",
+   "displayLink": "www.ft.com",
+   "snippet": "Aug 28, 2016 ... The price of wheat has crashed to the lowest level in a decade as huge harvests \npile up in big growers from Russia to the US, cutting the cost of ...",
+   "htmlSnippet": "Aug 28, 2016 \u003cb\u003e...\u003c/b\u003e The price of \u003cb\u003ewheat\u003c/b\u003e has crashed to the lowest level in a decade as huge harvests \u003cbr\u003e\npile up in big growers from Russia to the US, cutting the cost of&nbsp;...",
+   "formattedUrl": "https://www.ft.com/content/75fdb856-6b0c-11e6-ae5b-a7cc5dd5a28c",
+   "htmlFormattedUrl": "https://www.ft.com/content/75fdb856-6b0c-11e6-ae5b-a7cc5dd5a28c",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNrxvTCroBPXUjjG6oxd45rzA9kf9-Ye696Unl4WK-l8SWSqHLR8G7ZoE"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#333333",
+      "msapplication-tilecolor": "#fff1e0",
+      "msapplication-tileimage": "https://www.ft.com/__assets/creatives/brand-ft/icons/v3/mstile-144x144.png",
+      "og:title": "Wheat price falls to lowest level in a decade",
+      "og:description": "Commodity goes below $4 a bushel for first time since 2006 as good weather helps yield bumper crop",
+      "og:image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fe603e574-6523-11e6-8310-ecf0bddad227?source=next-opengraph&fit=scale-down&width=900",
+      "og:url": "https://www.ft.com/content/75fdb856-6b0c-11e6-ae5b-a7cc5dd5a28c",
+      "og:type": "article",
+      "article:published_time": "2016-08-28T15:48:04.000Z",
+      "article:modified_time": "2016-08-28T15:48:04.000Z",
+      "article:author": "Gregory Meyer",
+      "og:locale": "en_GB",
+      "og:site_name": "Financial Times",
+      "fb:pages": "8860325749",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@FinancialTimes"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fe603e574-6523-11e6-8310-ecf0bddad227?source=next-opengraph&fit=scale-down&width=900"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "CFTC wins reprieve against contempt charge in Kraft wheat case ...",
+   "htmlTitle": "CFTC wins reprieve against contempt charge in Kraft \u003cb\u003ewheat\u003c/b\u003e case ...",
+   "link": "https://www.ft.com/content/5fd447e8-e0a2-11e9-b112-9624ec9edc59",
+   "displayLink": "www.ft.com",
+   "snippet": "Sep 26, 2019 ... Appellate judges have halted an attempt by Kraft Heinz and Mondelez \nInternational to haul the US commodities regulator into court to justify ...",
+   "htmlSnippet": "Sep 26, 2019 \u003cb\u003e...\u003c/b\u003e Appellate judges have halted an attempt by Kraft Heinz and Mondelez \u003cbr\u003e\nInternational to haul the US commodities regulator into court to justify&nbsp;...",
+   "formattedUrl": "https://www.ft.com/content/5fd447e8-e0a2-11e9-b112-9624ec9edc59",
+   "htmlFormattedUrl": "https://www.ft.com/content/5fd447e8-e0a2-11e9-b112-9624ec9edc59",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "310",
+      "height": "163",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ0yOEMxq9tunKLglBDKQfywpmCcY837ooTsBfNlVOeiioOIkE7oXXIpqs"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#333333",
+      "msapplication-tilecolor": "#fff1e0",
+      "msapplication-tileimage": "https://www.ft.com/__assets/creatives/brand-ft/icons/v3/mstile-144x144.png",
+      "og:title": "CFTC wins reprieve against contempt charge in Kraft wheat case",
+      "og:description": "Appellate judges have halted an attempt by Kraft Heinz and Mondelez International to haul the US commodities regulator into court to justify controversial statements about the companies’ grain trading.",
+      "og:image": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fopen-graph%2Ffastft-v1.jpg?source=next-opengraph&fit=scale-down&width=900",
+      "og:url": "https://www.ft.com/content/5fd447e8-e0a2-11e9-b112-9624ec9edc59",
+      "og:type": "article",
+      "article:published_time": "2019-09-26T22:10:29.000Z",
+      "article:modified_time": "2019-09-26T22:10:29.000Z",
+      "article:author": "Gregory Meyer",
+      "og:locale": "en_GB",
+      "og:site_name": "Financial Times",
+      "fb:pages": "8860325749",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@FinancialTimes"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fopen-graph%2Ffastft-v1.jpg?source=next-opengraph&fit=scale-down&width=900"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "New London theatre: Bitter Wheat, The Damned, Strange Fruit ...",
+   "htmlTitle": "New London theatre: Bitter \u003cb\u003eWheat\u003c/b\u003e, The Damned, Strange Fruit ...",
+   "link": "https://www.ft.com/content/2ab0f9ce-9360-11e9-b7ea-60e35ef678d2",
+   "displayLink": "www.ft.com",
+   "snippet": "Jun 20, 2019 ... “Upsetting people is the point of theatre,” observed John Malkovich recently \nabout his role in David Mamet's new play Bitter Wheat (at the ...",
+   "htmlSnippet": "Jun 20, 2019 \u003cb\u003e...\u003c/b\u003e “Upsetting people is the point of theatre,” observed John Malkovich recently \u003cbr\u003e\nabout his role in David Mamet&#39;s new play Bitter \u003cb\u003eWheat\u003c/b\u003e (at the&nbsp;...",
+   "formattedUrl": "https://www.ft.com/content/2ab0f9ce-9360-11e9-b7ea-60e35ef678d2",
+   "htmlFormattedUrl": "https://www.ft.com/content/2ab0f9ce-9360-11e9-b7ea-60e35ef678d2",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRXYiEZt2DXQGq1rjaEOi6OVfmoJnmAAx2HJDyK049a-Iua2wXbScqVCcA"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "theme-color": "#333333",
+      "msapplication-tilecolor": "#fff1e0",
+      "msapplication-tileimage": "https://www.ft.com/__assets/creatives/brand-ft/icons/v3/mstile-144x144.png",
+      "og:title": "New London theatre: Bitter Wheat, The Damned, Strange Fruit",
+      "og:description": "John Malkovich is creepily brilliant in an Mamet’s otherwise ill-judged ‘Weinstein’ drama, while Ivo van Hove works wonders with Visconti",
+      "og:image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ffec9ca50-9366-11e9-8ff4-699df1c62544?source=next-opengraph&fit=scale-down&width=900",
+      "og:url": "https://www.ft.com/content/2ab0f9ce-9360-11e9-b7ea-60e35ef678d2",
+      "og:type": "article",
+      "article:published_time": "2019-06-21T04:01:24.000Z",
+      "article:modified_time": "2019-06-21T04:01:24.000Z",
+      "article:author": "Sarah Hemming",
+      "og:locale": "en_GB",
+      "og:site_name": "Financial Times",
+      "fb:pages": "8860325749",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@FinancialTimes"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ffec9ca50-9366-11e9-8ff4-699df1c62544?source=next-opengraph&fit=scale-down&width=900"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "U.S. Wheat hopes to grab 80 pct of Brazil tariff-free import quota ...",
+   "htmlTitle": "U.S. \u003cb\u003eWheat\u003c/b\u003e hopes to grab 80 pct of Brazil tariff-free import quota ...",
+   "link": "https://www.agriculture.com/markets/newswire/us-wheat-hopes-to-grab-80-pct-of-brazil-tariff-free-import-quota",
+   "displayLink": "www.agriculture.com",
+   "snippet": "Apr 17, 2019 ... By Marcelo TeixeiraSAO PAULO, April 17 (Reuters) - U.S. Wheat Associates, the \ngroup representing the United States wheat industry, is eying ...",
+   "htmlSnippet": "Apr 17, 2019 \u003cb\u003e...\u003c/b\u003e By Marcelo TeixeiraSAO PAULO, April 17 (Reuters) - U.S. \u003cb\u003eWheat\u003c/b\u003e Associates, the \u003cbr\u003e\ngroup representing the United States \u003cb\u003ewheat\u003c/b\u003e industry, is eying&nbsp;...",
+   "cacheId": "C3znSVr6Pe8J",
+   "formattedUrl": "https://www.agriculture.com/.../us-wheat-hopes-to-grab-80-pct-of-brazil- tariff-free-import-quota",
+   "htmlFormattedUrl": "https://www.agriculture.com/.../us-\u003cb\u003ewheat\u003c/b\u003e-hopes-to-grab-80-pct-of-brazil- tariff-free-import-quota",
+   "pagemap": {
+    "metatags": [
+     {
+      "fb:app_id": "1545978839053740",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "fb:pages": "116073665214311",
+      "og:site_name": "Successful Farming",
+      "og:type": "article",
+      "og:url": "https://www.agriculture.com/markets/newswire/us-wheat-hopes-to-grab-80-pct-of-brazil-tariff-free-import-quota",
+      "og:title": "U.S. Wheat hopes to grab 80 pct of Brazil tariff-free import quota",
+      "og:description": "By Marcelo TeixeiraSAO PAULO, April 17 (Reuters) - U.S. Wheat Associates, the group representing the United States wheat industry, is eying an 80% chunk of Brazil's 750,000-tonne tariff-free wheat import quota, Vince Peterson, the group's president, told Reuters on Wednesday.Peterson is leading a delegation of U.S. wheat producers and merchants visiting Brazilian wheat mills and food processors this week to gauge sales potential for coming months once a tariff-free quota is implemented.",
+      "og:updated_time": "2019-04-17T16:45:01-05:00",
+      "article:published_time": "2019-04-17T16:35:48-05:00",
+      "article:modified_time": "2019-04-17T16:45:01-05:00"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Southcentral North Dakota Wheat Yields Seen Above Average -Tour ...",
+   "htmlTitle": "Southcentral North Dakota \u003cb\u003eWheat\u003c/b\u003e Yields Seen Above Average -Tour ...",
+   "link": "https://www.agriculture.com/markets/newswire/south-central-north-dakota-wheat-yields-seen-above-average-tour",
+   "displayLink": "www.agriculture.com",
+   "snippet": "Jul 23, 2019 ... By Mark Weinraub GLEN ULLIN, N.D., July 23 (Reuters) - Wheat yield potential in \nsouth central North Dakota is trending above average, with ...",
+   "htmlSnippet": "Jul 23, 2019 \u003cb\u003e...\u003c/b\u003e By Mark Weinraub GLEN ULLIN, N.D., July 23 (Reuters) - \u003cb\u003eWheat\u003c/b\u003e yield potential in \u003cbr\u003e\nsouth central North Dakota is trending above average, with&nbsp;...",
+   "cacheId": "rngK6ME0Ze4J",
+   "formattedUrl": "https://www.agriculture.com/.../south-central-north-dakota-wheat-yields-seen- above-average-tour",
+   "htmlFormattedUrl": "https://www.agriculture.com/.../south-central-north-dakota-\u003cb\u003ewheat\u003c/b\u003e-yields-seen- above-average-tour",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTc8jtOaksyyFoZfiC0_zWQ-1uILu1uMKzn4XibJYLVDkDkpkQloNyRpqiP"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "fb:app_id": "1545978839053740",
+      "fb:pages": "116073665214311",
+      "og:site_name": "Successful Farming",
+      "og:type": "article",
+      "og:url": "https://www.agriculture.com/markets/newswire/south-central-north-dakota-wheat-yields-seen-above-average-tour",
+      "og:title": "Southcentral North Dakota Wheat Yields Seen Above Average -Tour",
+      "og:description": "By Mark Weinraub  GLEN ULLIN, N.D., July 23 (Reuters) - Wheat yield potential in south central North Dakota is trending above average, with the crop benefiting from ideal weather following a wet spring that delayed planting, scouts on annual tour found on Tuesday.  \"This is really good wheat for out here,\" said Dave Green, executive vice president of the Wheat Quality Council, which runs the tour. \"I think everything looks good for being so late.\"",
+      "og:updated_time": "2019-07-23T15:25:38-05:00",
+      "og:image": "https://images.agriculture.mdpcdn.com/sites/default/files/styles/width_550/public/image/2016/03/28/WheatField-CloseUp.jpg",
+      "article:published_time": "2019-07-23T13:06:58-05:00",
+      "article:modified_time": "2019-07-23T15:25:38-05:00"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images.agriculture.mdpcdn.com/sites/default/files/styles/width_550/public/image/2016/03/28/WheatField-CloseUp.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Ukraine benefits from slow start to Russia's wheat export season ...",
+   "htmlTitle": "Ukraine benefits from slow start to Russia&#39;s \u003cb\u003ewheat\u003c/b\u003e export season ...",
+   "link": "https://www.agriculture.com/markets/newswire/ukraine-benefits-from-slow-start-to-russias-wheat-export-season",
+   "displayLink": "www.agriculture.com",
+   "snippet": "Aug 29, 2019 ... Ukraine wheat exports up 55% so far this season* Slow pace of farmers' sales \nhampering Russian exportsBy Polina Devitt and Pavel ...",
+   "htmlSnippet": "Aug 29, 2019 \u003cb\u003e...\u003c/b\u003e Ukraine \u003cb\u003ewheat\u003c/b\u003e exports up 55% so far this season* Slow pace of farmers&#39; sales \u003cbr\u003e\nhampering Russian exportsBy Polina Devitt and Pavel&nbsp;...",
+   "cacheId": "1aMDTLDnurgJ",
+   "formattedUrl": "https://www.agriculture.com/.../ukraine-benefits-from-slow-start-to-russias- wheat-export-season",
+   "htmlFormattedUrl": "https://www.agriculture.com/.../ukraine-benefits-from-slow-start-to-russias- \u003cb\u003ewheat\u003c/b\u003e-export-season",
+   "pagemap": {
+    "metatags": [
+     {
+      "fb:app_id": "1545978839053740",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "fb:pages": "116073665214311",
+      "og:site_name": "Successful Farming",
+      "og:type": "article",
+      "og:url": "https://www.agriculture.com/markets/newswire/ukraine-benefits-from-slow-start-to-russias-wheat-export-season",
+      "og:title": "Ukraine benefits from slow start to Russia's wheat export season",
+      "og:description": "* Ukraine wheat exports up 55% so far this season* Slow pace of farmers' sales hampering Russian exportsBy Polina Devitt and Pavel PolityukMOSCOW/KIEV, Aug 29 (Reuters) - Russian wheat exports have been slow so far this season, to the benefit of Ukraine which has seen a surge in its shipments of the grain, traders said.Russia and Ukraine, along with Romania and Kazakhstan, compete with each other in wheat markets in North Africa and the Middle East, which they supply via the Black Sea.",
+      "og:updated_time": "2019-08-29T12:15:01-05:00",
+      "article:published_time": "2019-08-29T12:10:43-05:00",
+      "article:modified_time": "2019-08-29T12:15:01-05:00"
+     }
+    ]
+   }
+  }
+ ]
+}
+[0m
+[2019-10-20 04:53:59,419] {logging_mixin.py:95} INFO - [[34m2019-10-20 04:53:59,418[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

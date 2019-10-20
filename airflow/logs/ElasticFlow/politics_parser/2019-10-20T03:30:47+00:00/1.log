@@ -1,0 +1,551 @@
+[2019-10-20 09:02:11,975] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.politics_parser 2019-10-20T03:30:47+00:00 [queued]>
+[2019-10-20 09:02:11,981] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.politics_parser 2019-10-20T03:30:47+00:00 [queued]>
+[2019-10-20 09:02:11,981] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 09:02:11,981] {taskinstance.py:839} INFO - Starting attempt 1 of 4
+[2019-10-20 09:02:11,981] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 09:02:11,987] {taskinstance.py:859} INFO - Executing <Task(PoliticalEventsParser): politics_parser> on 2019-10-20T03:30:47+00:00
+[2019-10-20 09:02:11,987] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'ElasticFlow', 'politics_parser', '2019-10-20T03:30:47+00:00', '--job_id', '13', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmpwg3a68sr']
+[2019-10-20 09:02:12,937] {base_task_runner.py:115} INFO - Job 13: Subtask politics_parser [2019-10-20 09:02:12,937] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 09:02:13,152] {base_task_runner.py:115} INFO - Job 13: Subtask politics_parser [2019-10-20 09:02:13,150] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 09:02:13,169] {base_task_runner.py:115} INFO - Job 13: Subtask politics_parser [2019-10-20 09:02:13,168] {cli.py:516} INFO - Running <TaskInstance: ElasticFlow.politics_parser 2019-10-20T03:30:47+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 09:02:13,176] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:13,176[0m] {[34mDataParserPlugin.py:[0m160} INFO[0m - PoliticalEventsParser Initiated[0m
+[2019-10-20 09:02:13,179] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:13,179[0m] {[34mDataParserPlugin.py:[0m177} INFO[0m - {
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - policy",
+    "totalResults": "10500",
+    "searchTerms": "policy",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:g2mgttuy1bj"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - policy",
+    "totalResults": "10500",
+    "searchTerms": "policy",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:g2mgttuy1bj"
+   }
+  ]
+ },
+ "context": {
+  "title": "politics"
+ },
+ "searchInformation": {
+  "searchTime": 0.421614,
+  "formattedSearchTime": "0.42",
+  "totalResults": "10500",
+  "formattedTotalResults": "10,500"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Cabinet gives nod to Bihar Sand Mining Policy 2019 - Moneycontrol ...",
+   "htmlTitle": "Cabinet gives nod to Bihar Sand Mining \u003cb\u003ePolicy\u003c/b\u003e 2019 - Moneycontrol ...",
+   "link": "https://www.moneycontrol.com/news/politics/cabinet-gives-nod-to-bihar-sand-mining-policy-2019-4335261.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Aug 14, 2019 ... The Bihar Cabinet has approved the revised sand mining policy as per which an \napplicant can get licence for a maximum of two sand blocks.",
+   "htmlSnippet": "Aug 14, 2019 \u003cb\u003e...\u003c/b\u003e The Bihar Cabinet has approved the revised sand mining \u003cb\u003epolicy\u003c/b\u003e as per which an \u003cbr\u003e\napplicant can get licence for a maximum of two sand blocks.",
+   "cacheId": "1aAaYRWHD6cJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../cabinet-gives-nod-to-bihar-sand-mining- policy-2019-4335261.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../cabinet-gives-nod-to-bihar-sand-mining- \u003cb\u003epolicy\u003c/b\u003e-2019-4335261.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRVLrL6y9cAVS1_tCUB9lK6kf8pRYXggTkJ0XJdblmIzChVngwJrh3z1TN7"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Bihar Cabinet,Sand Mining Policy 2019,Bihar,Bihar police,Nitish Kumar",
+      "last-modified": "12:38:17 PM IST Aug 14, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/cabinet-gives-nod-to-bihar-sand-mining-policy-2019-4335261.html",
+      "og:title": "Cabinet gives nod to Bihar Sand Mining Policy 2019",
+      "og:description": "Altogether 19 decisions were taken in the cabinet meeting.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2018/11/PTI11_6_2018_000047B-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/cabinet-gives-nod-to-bihar-sand-mining-policy-2019-4335261.html",
+      "twitter:title": "Cabinet gives nod to Bihar Sand Mining Policy 2019",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2018/11/PTI11_6_2018_000047B-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2018/11/PTI11_6_2018_000047B-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Jairam Ramesh responsible for UPA-2's policy paralysis: Veerappa ...",
+   "htmlTitle": "Jairam Ramesh responsible for UPA-2&#39;s \u003cb\u003epolicy\u003c/b\u003e paralysis: Veerappa ...",
+   "link": "https://www.moneycontrol.com/news/politics/jairam-ramesh-responsible-for-upa-2s-policy-paralysis-veerappa-moily-4381251.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Aug 28, 2019 ... Senior Congress leader M Veerappa Moily alleged on Wednesday Jairam \nRamesh was responsible for \"policy paralysis\" during the UPA-2 ...",
+   "htmlSnippet": "Aug 28, 2019 \u003cb\u003e...\u003c/b\u003e Senior Congress leader M Veerappa Moily alleged on Wednesday Jairam \u003cbr\u003e\nRamesh was responsible for &quot;\u003cb\u003epolicy\u003c/b\u003e paralysis&quot; during the UPA-2&nbsp;...",
+   "cacheId": "L8AG0U8asx0J",
+   "formattedUrl": "https://www.moneycontrol.com/.../jairam-ramesh-responsible-for-upa-2s- policy-paralysis-veerappa-moily-4381251.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../jairam-ramesh-responsible-for-upa-2s- \u003cb\u003epolicy\u003c/b\u003e-paralysis-veerappa-moily-4381251.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSMZAc8gsqo3k4bd3Oj-Mo5kXNV1h04exowoEwoeGH1FDA0WdvJzRYH3MlP"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Politics,india,Jairam Ramesh,UPA 2,Veerappa Moily,government,Shashi Tharoor,Congress,BJP",
+      "last-modified": "01:52:19 PM IST Aug 28, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/jairam-ramesh-responsible-for-upa-2s-policy-paralysis-veerappa-moily-4381251.html",
+      "og:title": "Jairam Ramesh responsible for UPA-2's policy paralysis: Veerappa Moily",
+      "og:description": "The former Union Minister also slammed Shashi Tharoor for his statement that praising the Prime Minister Narendra Modi for doing the right things would lend credibility to the opposition's criticism of him.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2017/05/Jairam_Ramesh-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/jairam-ramesh-responsible-for-upa-2s-policy-paralysis-veerappa-moily-4381251.html",
+      "twitter:title": "Jairam Ramesh responsible for UPA-2's policy paralysis: Veerappa Moily",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2017/05/Jairam_Ramesh-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2017/05/Jairam_Ramesh-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Policy | Modi's West Asian diplomacy has removed the hyphen in ...",
+   "htmlTitle": "\u003cb\u003ePolicy\u003c/b\u003e | Modi&#39;s West Asian diplomacy has removed the hyphen in ...",
+   "link": "https://www.moneycontrol.com/news/politics/policy-modis-west-asian-diplomacy-has-removed-the-hyphen-in-india-pakistan-4389351.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Aug 30, 2019 ... KP Nayar. Some 25 years ago, South Block, the seat of the Ministry of External \nAffairs, was in ferment on the day Qatar's foreign minister arrived ...",
+   "htmlSnippet": "Aug 30, 2019 \u003cb\u003e...\u003c/b\u003e KP Nayar. Some 25 years ago, South Block, the seat of the Ministry of External \u003cbr\u003e\nAffairs, was in ferment on the day Qatar&#39;s foreign minister arrived&nbsp;...",
+   "cacheId": "mjazFchVUfAJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../policy-modis-west-asian-diplomacy-has- removed-the-hyphen-in-india-pakistan-4389351.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../\u003cb\u003epolicy\u003c/b\u003e-modis-west-asian-diplomacy-has- removed-the-hyphen-in-india-pakistan-4389351.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQhtDJ2EoFMoWtrDoun1TRmohmPER_oCySoXs9x_JnPsZKsxrk8bHbx8zh0"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Narendra Modi, UAE, Saudi Arabia, Qatar, MEA, Saudi Aramco, Kashmir, DP World, Pakistan,",
+      "last-modified": "11:43:18 AM IST Aug 30, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/policy-modis-west-asian-diplomacy-has-removed-the-hyphen-in-india-pakistan-4389351.html",
+      "og:title": "Policy | Modi’s West Asian diplomacy has removed the hyphen in India-Pakistan",
+      "og:description": "The Gulf countries no longer see their dealings with India or Pakistan as a zero sum game. The young leaders of these kingdoms and emirates are pragmatic enough to recognise that an emerging India is a far more an attractive partner than a moribund Pakistan.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2019/08/uae-awards-modi1-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/policy-modis-west-asian-diplomacy-has-removed-the-hyphen-in-india-pakistan-4389351.html",
+      "twitter:title": "Policy | Modi’s West Asian diplomacy has removed the hyphen in India-Pakistan",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2019/08/uae-awards-modi1-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2019/08/uae-awards-modi1-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Political stability, predictable policy framework make India attractive ...",
+   "htmlTitle": "Political stability, predictable \u003cb\u003epolicy\u003c/b\u003e framework make India attractive ...",
+   "link": "https://www.moneycontrol.com/news/politics/political-stability-predictable-policy-framework-make-india-attractive-investment-destination-pm-modi-4368231.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Aug 24, 2019 ... Prime Minister Narendra Modi on August 24 said \"political stability and \npredictable policy framework\" makes India an \"attractive\" investment ...",
+   "htmlSnippet": "Aug 24, 2019 \u003cb\u003e...\u003c/b\u003e Prime Minister Narendra Modi on August 24 said &quot;political stability and \u003cbr\u003e\npredictable \u003cb\u003epolicy\u003c/b\u003e framework&quot; makes India an &quot;attractive&quot; investment&nbsp;...",
+   "cacheId": "z_IwCaAQOcIJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../political-stability-predictable-policy- framework-make-india-attractive-investment-destination-pm-modi-...",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../political-stability-predictable-\u003cb\u003epolicy\u003c/b\u003e- framework-make-india-attractive-investment-destination-pm-modi-...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "299",
+      "height": "169",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxLn9QP6kTrqndXDFycbfuzU3keVwLgP_wWlG8Q9pTOsIiGHZcYzi2_vLf"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "narendra modi,modi in uae,india uae ties,abu dhabi,indian economy,make in india",
+      "last-modified": "01:27:16 PM IST Aug 24, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/political-stability-predictable-policy-framework-make-india-attractive-investment-destination-pm-modi-4368231.html",
+      "og:title": "Political stability, predictable policy framework make India attractive investment destination: PM Modi",
+      "og:description": "Addressing a group of NRI business community in the UAE capital Abu Dhabi, PM Modi thanked the community members, saying they have made a vital contribution to India's economic growth.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2019/08/Prime-Minister-Narendra-Modi-Image-PTI-770x435.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/political-stability-predictable-policy-framework-make-india-attractive-investment-destination-pm-modi-4368231.html",
+      "twitter:title": "Political stability, predictable policy framework make India attractive investment destination: PM Modi",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2019/08/Prime-Minister-Narendra-Modi-Image-PTI-770x435.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2019/08/Prime-Minister-Narendra-Modi-Image-PTI-770x435.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Modi govt has zero tolerance policy towards terror: Amit Shah ...",
+   "htmlTitle": "Modi govt has zero tolerance \u003cb\u003epolicy\u003c/b\u003e towards terror: Amit Shah ...",
+   "link": "https://www.moneycontrol.com/news/politics/modi-govt-has-zero-tolerance-policy-towards-terror-amit-shah-4149751.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Jun 28, 2019 ... Home Minister Amit Shah on June 28 asserted in the Lok Sabha that the Modi \ngovernment has 'zero tolerance' policy towards terrorism and its ...",
+   "htmlSnippet": "Jun 28, 2019 \u003cb\u003e...\u003c/b\u003e Home Minister Amit Shah on June 28 asserted in the Lok Sabha that the Modi \u003cbr\u003e\ngovernment has &#39;zero tolerance&#39; \u003cb\u003epolicy\u003c/b\u003e towards terrorism and its&nbsp;...",
+   "cacheId": "vuKLCribXZYJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../modi-govt-has-zero-tolerance-policy- towards-terror-amit-shah-4149751.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../modi-govt-has-zero-tolerance-\u003cb\u003epolicy\u003c/b\u003e- towards-terror-amit-shah-4149751.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRLzoT-8DbAvfyjE4M1eAuJlNk3G-2O1lJuyIH4CP8tr9tzBxSKRNUfJYA"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "amit shah,home ministry,j&k,Article 356,jawaharlal nehru,congress,president's rule j&k",
+      "last-modified": "06:00:29 PM IST Jun 28, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/modi-govt-has-zero-tolerance-policy-towards-terror-amit-shah-4149751.html",
+      "og:title": "Modi govt has zero tolerance policy towards terror: Amit Shah",
+      "og:description": "Hitting out at the Congress and then prime minister Jawaharlal Nehru, the Home Minister said one-third of Jammu and Kashmir is not with India.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2019/02/Amit-Shah-8-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/modi-govt-has-zero-tolerance-policy-towards-terror-amit-shah-4149751.html",
+      "twitter:title": "Modi govt has zero tolerance policy towards terror: Amit Shah",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2019/02/Amit-Shah-8-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2019/02/Amit-Shah-8-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Politics | China's foreign policy outreach in India's neighbourhood ...",
+   "htmlTitle": "Politics | China&#39;s foreign \u003cb\u003epolicy\u003c/b\u003e outreach in India&#39;s neighbourhood ...",
+   "link": "https://www.moneycontrol.com/news/politics/politics-chinas-foreign-policy-outreach-in-indias-neighbourhood-4492291.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Oct 1, 2019 ... India will need both a capable and expanded foreign service working in co-\nordination with political parties, business communities, intellectual ...",
+   "htmlSnippet": "Oct 1, 2019 \u003cb\u003e...\u003c/b\u003e India will need both a capable and expanded foreign service working in co-\u003cbr\u003e\nordination with political parties, business communities, intellectual&nbsp;...",
+   "cacheId": "VvYw0jzpuJQJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../politics-chinas-foreign-policy-outreach-in- indias-neighbourhood-4492291.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../politics-chinas-foreign-\u003cb\u003epolicy\u003c/b\u003e-outreach-in- indias-neighbourhood-4492291.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJNZWPv7z377woxLjDjh_N2lvdhDnPz1mXRP8g4XyQQfsAWXrZNiLENWg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "China, Nepal, communist parties, Sri Lanka, Pakistan, BRI, Xi Jinping, foreign policy, sot power, Indian model, Narendra Modi, neighbourhood first policy, MOFA,",
+      "last-modified": "12:03:54 PM IST Oct 01, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/politics-chinas-foreign-policy-outreach-in-indias-neighbourhood-4492291.html",
+      "og:title": "Politics | China’s foreign policy outreach in India’s neighbourhood",
+      "og:description": "India will need both a capable and expanded foreign service working in co-ordination with political parties, business communities, intellectual elites and the diaspora, and to display adherence to values that are attractive to other nations to push an ‘Indian model’ of politics and development that can challenge the Chinese one.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2019/10/RTX75HGL-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/politics-chinas-foreign-policy-outreach-in-indias-neighbourhood-4492291.html",
+      "twitter:title": "Politics | China’s foreign policy outreach in India’s neighbourhood",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2019/10/RTX75HGL-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2019/10/RTX75HGL-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "PM Modi tore apart long-standing foreign policy of non-alignment ...",
+   "htmlTitle": "PM Modi tore apart long-standing foreign \u003cb\u003epolicy\u003c/b\u003e of non-alignment ...",
+   "link": "https://www.moneycontrol.com/news/politics/pm-modi-tore-apart-long-standing-foreign-policy-of-non-alignment-ashok-gehlot-on-howdy-modi-rally-4469971.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Sep 24, 2019 ... Modi went against the country's long-standing policy of not interfering in elections \nof another country when he \"openly campaigned\" for one ...",
+   "htmlSnippet": "Sep 24, 2019 \u003cb\u003e...\u003c/b\u003e Modi went against the country&#39;s long-standing \u003cb\u003epolicy\u003c/b\u003e of not interfering in elections \u003cbr\u003e\nof another country when he &quot;openly campaigned&quot; for one&nbsp;...",
+   "cacheId": "atjvWZGM1YcJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../pm-modi-tore-apart-long-standing-foreign -policy-of-non-alignment-ashok-gehlot-on-howdy-modi-rally-4469...",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../pm-modi-tore-apart-long-standing-foreign -\u003cb\u003epolicy\u003c/b\u003e-of-non-alignment-ashok-gehlot-on-howdy-modi-rally-4469...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ2NHni6ld1od-AwBq1wpHb6yYkKJUKLmEVKmKV0oGGTqfKAQnto44JCiqk"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Ashok Gehlot,howdy modi,narendra modi,bjp,congress",
+      "last-modified": "04:28:10 PM IST Sep 24, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/pm-modi-tore-apart-long-standing-foreign-policy-of-non-alignment-ashok-gehlot-on-howdy-modi-rally-4469971.html",
+      "og:title": "PM Modi tore apart long-standing foreign policy of non-alignment: Ashok Gehlot on 'Howdy, Modi!' rally",
+      "og:description": "Gehlot also demanded that the prime minister address the nation about the prevailing condition in the Kashmir Valley.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2018/12/Ashok-Gehlot-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/pm-modi-tore-apart-long-standing-foreign-policy-of-non-alignment-ashok-gehlot-on-howdy-modi-rally-4469971.html",
+      "twitter:title": "PM Modi tore apart long-standing foreign policy of non-alignment: Ashok Gehlot on 'Howdy, Modi!' rally",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2018/12/Ashok-Gehlot-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2018/12/Ashok-Gehlot-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Rising India | Modi must build on foreign policy success ...",
+   "htmlTitle": "Rising India | Modi must build on foreign \u003cb\u003epolicy\u003c/b\u003e success ...",
+   "link": "https://www.moneycontrol.com/news/politics/rising-india-modi-must-build-on-foreign-policy-success-4016871.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "May 24, 2019 ... Modi has been a foreign policy Prime Minister in his first term. He relished global \nengagements and never gave an impression that his lack of ...",
+   "htmlSnippet": "May 24, 2019 \u003cb\u003e...\u003c/b\u003e Modi has been a foreign \u003cb\u003epolicy\u003c/b\u003e Prime Minister in his first term. He relished global \u003cbr\u003e\nengagements and never gave an impression that his lack of&nbsp;...",
+   "cacheId": "otFLFyyRbnIJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../rising-india-modi-must-build-on-foreign- policy-success-4016871.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../rising-india-modi-must-build-on-foreign- \u003cb\u003epolicy\u003c/b\u003e-success-4016871.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ygqNd2RuQs-qURLKxG0HLOzREVoN1oaUchiKiLMyJz9cj38SKgLJQKA"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Narendra Modi, Foreign Policy, Indo-US, Indo-Pak, India-China, Lok Sabha Polls 2019, Lok Sabha Elections 2019, general Elections 2019, Modi 2.0",
+      "last-modified": "02:28:53 PM IST May 24, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/rising-india-modi-must-build-on-foreign-policy-success-4016871.html",
+      "og:title": "Rising India | Modi must build on foreign policy success",
+      "og:description": "In his first term, Modi had succeeded in articulating a global role for India as a leading player in the international system, one which shapes global rules and is not merely a rule-taker. In his second term, he should be focusing more on how to operationalise this idea into concrete policy outcomes.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2017/06/Modi-meets-Trump-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/rising-india-modi-must-build-on-foreign-policy-success-4016871.html",
+      "twitter:title": "Rising India | Modi must build on foreign policy success",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2017/06/Modi-meets-Trump-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2017/06/Modi-meets-Trump-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Sealing-hit Delhi restaurateurs want input tax credit back, clear ...",
+   "htmlTitle": "Sealing-hit Delhi restaurateurs want input tax credit back, clear ...",
+   "link": "https://www.moneycontrol.com/news/politics/sealing-hit-delhi-restaurateurs-want-input-tax-credit-back-clear-policy-for-sector-3951681.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "May 9, 2019 ... Restaurant owners also want a clear and fixed policy for governing the sector.",
+   "htmlSnippet": "May 9, 2019 \u003cb\u003e...\u003c/b\u003e Restaurant owners also want a clear and fixed \u003cb\u003epolicy\u003c/b\u003e for governing the sector.",
+   "cacheId": "WTd9MHGvcT0J",
+   "formattedUrl": "https://www.moneycontrol.com/.../sealing-hit-delhi-restaurateurs-want-input- tax-credit-back-clear-policy-for-sector-3951681.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../sealing-hit-delhi-restaurateurs-want-input- tax-credit-back-clear-\u003cb\u003epolicy\u003c/b\u003e-for-sector-3951681.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS6wBeAgW4L5RwXOYRCGpOkuFxTIwC5mMjNE49J4Q6ih8gENcYsN3v0MQJy"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "Reintroduction of input tax credit,ITC,rooftop sealing in restaurants in delhi,eating sector India,restaurant licensing delhi",
+      "last-modified": "12:36:24 PM IST May 09, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/sealing-hit-delhi-restaurateurs-want-input-tax-credit-back-clear-policy-for-sector-3951681.html",
+      "og:title": "Sealing-hit Delhi restaurateurs want input tax credit back, clear policy for sector",
+      "og:description": "Restaurant owners also want a clear and fixed policy for governing the sector.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2017/07/food-liquor-restaurant-dine-meal-1280-720-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/sealing-hit-delhi-restaurateurs-want-input-tax-credit-back-clear-policy-for-sector-3951681.html",
+      "twitter:title": "Sealing-hit Delhi restaurateurs want input tax credit back, clear policy for sector",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2017/07/food-liquor-restaurant-dine-meal-1280-720-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2017/07/food-liquor-restaurant-dine-meal-1280-720-770x433.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Donald Trump's Kashmir mediation remark is huge policy shift ...",
+   "htmlTitle": "Donald Trump&#39;s Kashmir mediation remark is huge \u003cb\u003epolicy\u003c/b\u003e shift ...",
+   "link": "https://www.moneycontrol.com/news/politics/donald-trumps-kashmir-mediation-remark-is-huge-policy-shift-mehbooba-mufti-4237041.html",
+   "displayLink": "www.moneycontrol.com",
+   "snippet": "Jul 23, 2019 ... PDP president Mehbooba Mufti on July 23 said US President Donald Trump's \"\ndisclosure\" on third party mediation on Kashmir is a \"huge policy ...",
+   "htmlSnippet": "Jul 23, 2019 \u003cb\u003e...\u003c/b\u003e PDP president Mehbooba Mufti on July 23 said US President Donald Trump&#39;s &quot;\u003cbr\u003e\ndisclosure&quot; on third party mediation on Kashmir is a &quot;huge \u003cb\u003epolicy\u003c/b\u003e&nbsp;...",
+   "cacheId": "FeHzN1AeFUEJ",
+   "formattedUrl": "https://www.moneycontrol.com/.../donald-trumps-kashmir-mediation-remark -is-huge-policy-shift-mehbooba-mufti-4237041.html",
+   "htmlFormattedUrl": "https://www.moneycontrol.com/.../donald-trumps-kashmir-mediation-remark -is-huge-\u003cb\u003epolicy\u003c/b\u003e-shift-mehbooba-mufti-4237041.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWtj_etko77IQZiw9eXwCxAQgiXuxKG1tw7QoMioEX7ke7av4FMAdeVma"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "news_keywords": "imran khan,kashmir dispute,indo pak tension,narendra modi,mehbooba mufti",
+      "last-modified": "04:58:45 PM IST Jul 23, 2019",
+      "og:locale": "en_US",
+      "og:site_name": "Moneycontrol",
+      "og:type": "website",
+      "og:url": "https://www.moneycontrol.com/news/politics/donald-trumps-kashmir-mediation-remark-is-huge-policy-shift-mehbooba-mufti-4237041.html",
+      "og:title": "Donald Trump's Kashmir mediation remark is huge policy shift: Mehbooba Mufti",
+      "og:description": "Trump claimed during his meeting with Pakistan Premier Imran Khan that Prime Minister Narendra Modi had requested him to mediate in the Kashmir dispute.",
+      "og:image": "https://static-news.moneycontrol.com/static-mcnews/2018/12/mehbooba-mufti-770x433.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@moneycontrolcom",
+      "twitter:creator": "@moneycontrolcom",
+      "twitter:url": "https://www.moneycontrol.com/news/politics/donald-trumps-kashmir-mediation-remark-is-huge-policy-shift-mehbooba-mufti-4237041.html",
+      "twitter:title": "Donald Trump's Kashmir mediation remark is huge policy shift: Mehbooba Mufti",
+      "twitter:image:src": "https://static-news.moneycontrol.com/static-mcnews/2018/12/mehbooba-mufti-770x433.jpg",
+      "fb:pages": "143902715620459",
+      "handheldfriendly": "true",
+      "dailymotion-domain-verification": "dmpn9sdnwtvex9ltc"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static-news.moneycontrol.com/static-mcnews/2018/12/mehbooba-mufti-770x433.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}
+[0m
+[2019-10-20 09:02:16,976] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:16,975[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

@@ -1,0 +1,603 @@
+[2019-10-20 09:02:18,277] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.global_cues_parser 2019-10-20T03:30:47+00:00 [queued]>
+[2019-10-20 09:02:18,284] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.global_cues_parser 2019-10-20T03:30:47+00:00 [queued]>
+[2019-10-20 09:02:18,284] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 09:02:18,284] {taskinstance.py:839} INFO - Starting attempt 1 of 4
+[2019-10-20 09:02:18,284] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 09:02:18,291] {taskinstance.py:859} INFO - Executing <Task(GlobalCuesParser): global_cues_parser> on 2019-10-20T03:30:47+00:00
+[2019-10-20 09:02:18,291] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'ElasticFlow', 'global_cues_parser', '2019-10-20T03:30:47+00:00', '--job_id', '14', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmpnpkvvllt']
+[2019-10-20 09:02:19,170] {base_task_runner.py:115} INFO - Job 14: Subtask global_cues_parser [2019-10-20 09:02:19,170] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 09:02:19,349] {base_task_runner.py:115} INFO - Job 14: Subtask global_cues_parser [2019-10-20 09:02:19,348] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 09:02:19,370] {base_task_runner.py:115} INFO - Job 14: Subtask global_cues_parser [2019-10-20 09:02:19,370] {cli.py:516} INFO - Running <TaskInstance: ElasticFlow.global_cues_parser 2019-10-20T03:30:47+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 09:02:19,378] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:19,378[0m] {[34mDataParserPlugin.py:[0m82} INFO[0m - GlobalCuesParser Initiated[0m
+[2019-10-20 09:02:19,381] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:19,381[0m] {[34mDataParserPlugin.py:[0m99} INFO[0m - {
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - policy",
+    "totalResults": "80600",
+    "searchTerms": "policy",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:h25gwylbijp"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - policy",
+    "totalResults": "80600",
+    "searchTerms": "policy",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "012467406080593405763:h25gwylbijp"
+   }
+  ]
+ },
+ "context": {
+  "title": "world-politics"
+ },
+ "searchInformation": {
+  "searchTime": 0.32474,
+  "formattedSearchTime": "0.32",
+  "totalResults": "80600",
+  "formattedTotalResults": "80,600"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "EU subsidies deny Africa's farmers of their livelihood | The ...",
+   "htmlTitle": "EU subsidies deny Africa&#39;s farmers of their livelihood | The ...",
+   "link": "https://www.independent.co.uk/news/world/politics/eu-subsidies-deny-africas-farmers-of-their-livelihood-478419.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "May 16, 2006 ... Claire Godfrey, trade policy adviser for Oxfam, said: \"Not only does the Common \nAgricultural Policy hit European shoppers in their pockets but ...",
+   "htmlSnippet": "May 16, 2006 \u003cb\u003e...\u003c/b\u003e Claire Godfrey, trade \u003cb\u003epolicy\u003c/b\u003e adviser for Oxfam, said: &quot;Not only does the Common \u003cbr\u003e\nAgricultural \u003cb\u003ePolicy\u003c/b\u003e hit European shoppers in their pockets but&nbsp;...",
+   "cacheId": "lhkragjhZ4UJ",
+   "formattedUrl": "https://www.independent.co.uk/.../eu-subsidies-deny-africas-farmers-of-their- livelihood-478419.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../eu-subsidies-deny-africas-farmers-of-their- livelihood-478419.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTnnk5O0fEorVS72JW1YA3AiNBCymkCRNNgJxONEr_LDoic4tHxc8tXz5M"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/eu-subsidies-deny-africas-farmers-of-their-livelihood-478419.html",
+      "fb:pages": "13312631635",
+      "og:title": "EU subsidies deny Africa's farmers of their livelihood",
+      "og:updated_time": "2011-10-22T23:10:39+01:00",
+      "article:author": "http://www.independent.co.uk/author/social-affairs-correspondent",
+      "article:tag": "Hartlepool",
+      "article:published_time": "2006-05-16T00:00:21+01:00",
+      "article:modified_time": "2011-10-22T23:10:39+01:00",
+      "twitter:description": "British households pay an extra £832 a year in grocery bills due to the huge EU subsidy system that is also depriving tens of thousands of African farmers of their livelihoods, a charity warns.",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:subsection": "Frontpage",
+      "article:author_name": "By Maxine Frith, Social Affairs Correspondent",
+      "article:content_type": "story",
+      "article:word_count": "688",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://img.apester.com/insecure/fit/700/0/ce/0/plain/user-images%2Fa0%2Fa0af6eb3617a4f9b639c6728e7d1c8d7.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Bush demands 'zero tolerance' Iraq policy | The Independent",
+   "htmlTitle": "Bush demands &#39;zero tolerance&#39; Iraq \u003cb\u003epolicy\u003c/b\u003e | The Independent",
+   "link": "https://www.independent.co.uk/news/world/politics/bush-demands-zero-tolerance-iraq-policy-133339.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Nov 11, 2002 ... The Bush administration declared yesterday that it would have \"zero tolerance\" \nfor any attempt by Saddam Hussein to thwart the UN weapons ...",
+   "htmlSnippet": "Nov 11, 2002 \u003cb\u003e...\u003c/b\u003e The Bush administration declared yesterday that it would have &quot;zero tolerance&quot; \u003cbr\u003e\nfor any attempt by Saddam Hussein to thwart the UN weapons&nbsp;...",
+   "cacheId": "tEvxleuSvhQJ",
+   "formattedUrl": "https://www.independent.co.uk/.../bush-demands-zero-tolerance-iraq-policy- 133339.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../bush-demands-zero-tolerance-iraq-\u003cb\u003epolicy\u003c/b\u003e- 133339.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/bush-demands-zero-tolerance-iraq-policy-133339.html",
+      "fb:pages": "13312631635",
+      "og:title": "Bush demands 'zero tolerance' Iraq policy",
+      "og:updated_time": "2014-02-04T04:33:03+00:00",
+      "article:published_time": "2002-11-11T00:00:00+00:00",
+      "article:modified_time": "2014-02-04T04:33:03+00:00",
+      "twitter:description": "The Bush administration declared yesterday that it would have \"zero tolerance\" for any attempt by Saddam Hussein to thwart the UN weapons inspectors when they start their mission - the only chance of",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": "Rupert Cornwell",
+      "article:content_type": "story",
+      "article:word_count": "408",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "The 17 best-governed countries in the world | The Independent",
+   "htmlTitle": "The 17 best-governed countries in the world | The Independent",
+   "link": "https://www.independent.co.uk/news/world/politics/17-best-governed-countries-world-a7417096.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Nov 14, 2016 ... The Legatum Institute, a policy research group, has released its annual \"Global \nProsperity Index,\" a major survey that ranks countries based on ...",
+   "htmlSnippet": "Nov 14, 2016 \u003cb\u003e...\u003c/b\u003e The Legatum Institute, a \u003cb\u003epolicy\u003c/b\u003e research group, has released its annual &quot;Global \u003cbr\u003e\nProsperity Index,&quot; a major survey that ranks countries based on&nbsp;...",
+   "cacheId": "0G_Vz9xNHc0J",
+   "formattedUrl": "https://www.independent.co.uk/.../17-best-governed-countries-world- a7417096.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../17-best-governed-countries-world- a7417096.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "262",
+      "height": "192",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTPtZrnLSgutIDlDAUjb_jAOoa2hbuYYux3ZrcKD0tWf_KVS5Xl_JGDWT_5"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/17-best-governed-countries-world-a7417096.html",
+      "ia:markup_url": "https://www.independent.co.uk/pwamp/fbi/7417096",
+      "fb:pages": "13312631635",
+      "og:title": "The 17 best-governed countries in the world",
+      "og:updated_time": "2016-11-14T17:42:38+00:00",
+      "og:image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/08/13/gettyimages-621634284.jpg",
+      "article:author": "http://www.independent.co.uk/author/adam-payne",
+      "article:tag": "Government",
+      "article:published_time": "2016-11-14T17:42:39+00:00",
+      "article:modified_time": "2016-11-14T17:42:38+00:00",
+      "twitter:title": "The 17 best-governed countries in the world",
+      "twitter:description": "The Legatum Institute, a policy research group, has released its annual \"Global Prosperity Index,\" a major survey that ranks countries based on factors including national wealth, education levels,",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": "Thomas Colson, Adam Payne, Business Insider",
+      "article:content_type": "story",
+      "article:word_count": "650",
+      "article:image_count": "2",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "5",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/08/13/gettyimages-621634284.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Mary Dejevsky: America to change policy in Afghanistan | The ...",
+   "htmlTitle": "Mary Dejevsky: America to change \u003cb\u003epolicy\u003c/b\u003e in Afghanistan | The ...",
+   "link": "https://www.independent.co.uk/news/world/politics/mary-dejevsky-america-to-change-policy-in-afghanistan-1604608.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Feb 9, 2009 ... Terrorism – the be-all and end-all of policy towards the region under President \nGeorge Bush – is now seen as much as a product as a cause of ...",
+   "htmlSnippet": "Feb 9, 2009 \u003cb\u003e...\u003c/b\u003e Terrorism – the be-all and end-all of \u003cb\u003epolicy\u003c/b\u003e towards the region under President \u003cbr\u003e\nGeorge Bush – is now seen as much as a product as a cause of&nbsp;...",
+   "cacheId": "oOo05TTi_CwJ",
+   "formattedUrl": "https://www.independent.co.uk/.../mary-dejevsky-america-to-change-policy- in-afghanistan-1604608.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../mary-dejevsky-america-to-change-\u003cb\u003epolicy\u003c/b\u003e- in-afghanistan-1604608.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "272",
+      "height": "185",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS2Kp7A5cpPGO0vi678zqBaNMZ-oV_vQaMB_pPQbZTyKjcf96q-bZB7nk8"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/mary-dejevsky-america-to-change-policy-in-afghanistan-1604608.html",
+      "fb:pages": "13312631635",
+      "og:title": "Mary Dejevsky: America to change policy in Afghanistan",
+      "og:updated_time": "2011-10-22T23:40:18+01:00",
+      "og:image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2009/02/09/00/128916.bin",
+      "article:tag": "Hamid Karzai",
+      "article:published_time": "2009-02-09T00:55:41+00:00",
+      "article:modified_time": "2011-10-22T23:40:18+01:00",
+      "twitter:description": "The Obama administration is comprehensively rethinking America’s approach to Afghanistan. At the top of the new list of objectives is “striving to secure and serve” the population.",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:subsection": "Mary Dejevsky",
+      "article:content_type": "story",
+      "article:word_count": "398",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2009/02/09/00/128916.bin?w968h681"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "China defends policy on Sudan | The Independent",
+   "htmlTitle": "China defends \u003cb\u003epolicy\u003c/b\u003e on Sudan | The Independent",
+   "link": "https://www.independent.co.uk/news/world/politics/china-defends-policy-on-sudan-786158.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Feb 23, 2008 ... Ambassador Liu Guijin, the Chinese government's special representative on \nDarfur, has defended China's policy on Sudan in a speech to ...",
+   "htmlSnippet": "Feb 23, 2008 \u003cb\u003e...\u003c/b\u003e Ambassador Liu Guijin, the Chinese government&#39;s special representative on \u003cbr\u003e\nDarfur, has defended China&#39;s \u003cb\u003epolicy\u003c/b\u003e on Sudan in a speech to&nbsp;...",
+   "cacheId": "0LzoxcG3u8IJ",
+   "formattedUrl": "https://www.independent.co.uk/.../china-defends-policy-on-sudan-786158. html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../china-defends-\u003cb\u003epolicy\u003c/b\u003e-on-sudan-786158. html",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/china-defends-policy-on-sudan-786158.html",
+      "fb:pages": "13312631635",
+      "og:title": "China defends policy on Sudan",
+      "og:updated_time": "2011-10-23T07:29:06+01:00",
+      "article:tag": "China",
+      "article:published_time": "2008-02-23T00:00:01+00:00",
+      "article:modified_time": "2011-10-23T07:29:06+01:00",
+      "twitter:description": "Ambassador Liu Guijin, the Chinese government's special representative on Darfur, has defended China's policy on Sudan in a speech to Chatham House, the respected international affairs body in London.",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": "By Colin Brown",
+      "article:content_type": "story",
+      "article:word_count": "182",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "UN drugs chief sticks to punitive policy despite major failings | The ...",
+   "htmlTitle": "UN drugs chief sticks to punitive \u003cb\u003epolicy\u003c/b\u003e despite major failings | The ...",
+   "link": "https://www.independent.co.uk/news/world/politics/un-drugs-chief-sticks-to-punitive-policy-despite-major-failings-2252477.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Mar 25, 2011 ... Champions of drug-policy reform agree that trafficking is a major global problem, \nbut some worry that a call to invigorate the convention could ...",
+   "htmlSnippet": "Mar 25, 2011 \u003cb\u003e...\u003c/b\u003e Champions of drug-\u003cb\u003epolicy\u003c/b\u003e reform agree that trafficking is a major global problem, \u003cbr\u003e\nbut some worry that a call to invigorate the convention could&nbsp;...",
+   "cacheId": "_QEee49oRrMJ",
+   "formattedUrl": "https://www.independent.co.uk/.../un-drugs-chief-sticks-to-punitive-policy- despite-major-failings-2252477.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../un-drugs-chief-sticks-to-punitive-\u003cb\u003epolicy\u003c/b\u003e- despite-major-failings-2252477.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "272",
+      "height": "185",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQerp_CKQoT_NWDFRri0uIelvgbkBn-y9tw873doTwIpQYTq5-V_LVqNsIt"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/un-drugs-chief-sticks-to-punitive-policy-despite-major-failings-2252477.html",
+      "fb:pages": "13312631635",
+      "og:title": "UN drugs chief sticks to punitive policy despite major failings",
+      "og:updated_time": "2011-10-23T00:23:19+01:00",
+      "og:image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2011/03/24/18/585603.bin",
+      "article:tag": "HIV",
+      "article:published_time": "2011-03-25T00:00:01+00:00",
+      "article:modified_time": "2011-10-23T00:23:19+01:00",
+      "twitter:description": "International efforts to tackle the \"global threat\" of illicit drugs must be \"rejuvenated\" in accordance with a 50-year-old convention despite a series of major failings, the head of the UN drugs and",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:subsection": "Health News",
+      "article:author_name": "By Enjoli Liston in Vienna",
+      "article:content_type": "story",
+      "article:word_count": "620",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2011/03/24/18/585603.bin?w968h681"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Cameron takes commercial approach to foreign policy | The ...",
+   "htmlTitle": "Cameron takes commercial approach to foreign \u003cb\u003epolicy\u003c/b\u003e | The ...",
+   "link": "https://www.independent.co.uk/news/world/politics/cameron-takes-commercial-approach-to-foreign-policy-2032218.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Jul 22, 2010 ... David Cameron has ordered a revamp of the Foreign Office as Labour's much-\nmocked \"ethical\" foreign policy gives way to a commercial ...",
+   "htmlSnippet": "Jul 22, 2010 \u003cb\u003e...\u003c/b\u003e David Cameron has ordered a revamp of the Foreign Office as Labour&#39;s much-\u003cbr\u003e\nmocked &quot;ethical&quot; foreign \u003cb\u003epolicy\u003c/b\u003e gives way to a commercial&nbsp;...",
+   "cacheId": "vBFcLPUoI7gJ",
+   "formattedUrl": "https://www.independent.co.uk/.../cameron-takes-commercial-approach-to- foreign-policy-2032218.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../cameron-takes-commercial-approach-to- foreign-\u003cb\u003epolicy\u003c/b\u003e-2032218.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "201",
+      "height": "250",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTq4RX4vo5edW0R819_C7Y2n4_2yPT100m_jrjpkVexAirR2fO31Qu0uVM"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/cameron-takes-commercial-approach-to-foreign-policy-2032218.html",
+      "fb:pages": "13312631635",
+      "og:title": "Cameron takes commercial approach to foreign policy",
+      "og:updated_time": "2011-10-22T22:31:59+01:00",
+      "og:image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2010/07/21/21/417887.bin",
+      "article:tag": "David Cameron",
+      "article:published_time": "2010-07-22T00:00:01+01:00",
+      "article:modified_time": "2011-10-22T22:31:59+01:00",
+      "twitter:description": "Businessmen could be recruited as British ambassadors abroad under a shake-up of the Foreign Office to put diplomats in the front line of winning orders for UK firms and inward investment in this",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:subsection": "Americas",
+      "article:author_name": "By Andrew Grice in Washington",
+      "article:content_type": "story",
+      "article:word_count": "939",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2010/07/21/21/417887.bin?w968h681"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Iraq policy has led to Blair's downfall, says top British UN official ...",
+   "htmlTitle": "Iraq \u003cb\u003epolicy\u003c/b\u003e has led to Blair&#39;s downfall, says top British UN official ...",
+   "link": "https://www.independent.co.uk/news/world/politics/iraq-policy-has-led-to-blairs-downfall-says-top-british-un-official-418016.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Sep 29, 2006 ... Tony Blair's policy in Iraq is what, ultimately, fatally undermined his position as \nPrime Minister and forced him to step down, said the deputy ...",
+   "htmlSnippet": "Sep 29, 2006 \u003cb\u003e...\u003c/b\u003e Tony Blair&#39;s \u003cb\u003epolicy\u003c/b\u003e in Iraq is what, ultimately, fatally undermined his position as \u003cbr\u003e\nPrime Minister and forced him to step down, said the deputy&nbsp;...",
+   "cacheId": "df_j4jdewrgJ",
+   "formattedUrl": "https://www.independent.co.uk/.../iraq-policy-has-led-to-blairs-downfall-says -top-british-un-official-418016.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../iraq-\u003cb\u003epolicy\u003c/b\u003e-has-led-to-blairs-downfall-says -top-british-un-official-418016.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/iraq-policy-has-led-to-blairs-downfall-says-top-british-un-official-418016.html",
+      "fb:pages": "13312631635",
+      "og:title": "Iraq policy has led to Blair's downfall, says top British UN official",
+      "og:updated_time": "2011-09-22T04:58:56+01:00",
+      "article:author": "http://www.independent.co.uk/author/paul-vallely",
+      "article:published_time": "2006-09-29T00:00:11+01:00",
+      "article:modified_time": "2011-09-22T04:58:56+01:00",
+      "twitter:description": "Tony Blair's policy in Iraq is what, ultimately, fatally undermined his position as Prime Minister and forced him to step down, said the deputy secretary general of the United Nations, Mark Malloch",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": ", Paul Vallely",
+      "article:content_type": "story",
+      "article:word_count": "360",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Nato woos Russia at its talks on Afghan policy | The Independent",
+   "htmlTitle": "Nato woos Russia at its talks on Afghan \u003cb\u003epolicy\u003c/b\u003e | The Independent",
+   "link": "https://www.independent.co.uk/news/world/politics/nato-woos-russia-at-its-talks-on-afghan-policy-2138112.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Nov 19, 2010 ... What is decided in Lisbon will define Nato's policy for the next decade. It is one of \nthe most important summits in the history of our alliance.",
+   "htmlSnippet": "Nov 19, 2010 \u003cb\u003e...\u003c/b\u003e What is decided in Lisbon will define Nato&#39;s \u003cb\u003epolicy\u003c/b\u003e for the next decade. It is one of \u003cbr\u003e\nthe most important summits in the history of our alliance.",
+   "cacheId": "nTeD8CayIQcJ",
+   "formattedUrl": "https://www.independent.co.uk/.../nato-woos-russia-at-its-talks-on-afghan- policy-2138112.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../nato-woos-russia-at-its-talks-on-afghan- \u003cb\u003epolicy\u003c/b\u003e-2138112.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/nato-woos-russia-at-its-talks-on-afghan-policy-2138112.html",
+      "fb:pages": "13312631635",
+      "og:title": "Nato woos Russia at its talks on Afghan policy",
+      "og:updated_time": "2011-10-23T05:34:43+01:00",
+      "article:author": "http://www.independent.co.uk/author/diplomatic-correspondent",
+      "article:tag": "Diplomacy",
+      "article:published_time": "2010-11-19T00:00:01+00:00",
+      "article:modified_time": "2011-10-23T05:34:43+01:00",
+      "twitter:description": "The Nato summit in Lisbon, described as one of the most important in the history of the alliance, will begin today with the aim of setting a deadline for withdrawal from Afghanistan and bringing",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": "By Kim Sengupta, Diplomatic Correspondent",
+      "article:content_type": "story",
+      "article:word_count": "270",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Blair hints at support for US policy on Iraq | The Independent",
+   "htmlTitle": "Blair hints at support for US \u003cb\u003epolicy\u003c/b\u003e on Iraq | The Independent",
+   "link": "https://www.independent.co.uk/news/world/politics/blair-hints-at-support-for-us-policy-on-iraq-9260817.html",
+   "displayLink": "www.independent.co.uk",
+   "snippet": "Feb 28, 2002 ... Prime Minister Tony Blair has singled out Iraq as a threat to world stability, \naccusing it of accumulating weapons of mass destruction.Blair told ...",
+   "htmlSnippet": "Feb 28, 2002 \u003cb\u003e...\u003c/b\u003e Prime Minister Tony Blair has singled out Iraq as a threat to world stability, \u003cbr\u003e\naccusing it of accumulating weapons of mass destruction.Blair told&nbsp;...",
+   "cacheId": "a-KT5DQmMSoJ",
+   "formattedUrl": "https://www.independent.co.uk/.../blair-hints-at-support-for-us-policy-on-iraq -9260817.html",
+   "htmlFormattedUrl": "https://www.independent.co.uk/.../blair-hints-at-support-for-us-\u003cb\u003epolicy\u003c/b\u003e-on-iraq -9260817.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnhwd1PoV-__L_bymZsAtCm4e4FIgIYInNBC9UCNmt8XXbmw1YG04SgwY"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "theme-color": "#db3739",
+      "og:url": "http://www.independent.co.uk/news/world/politics/blair-hints-at-support-for-us-policy-on-iraq-9260817.html",
+      "fb:pages": "13312631635",
+      "og:title": "Blair hints at support for US policy on Iraq",
+      "og:updated_time": "2014-04-15T04:35:13+01:00",
+      "article:published_time": "2002-02-28T00:00:00+00:00",
+      "article:modified_time": "2014-04-15T04:35:13+01:00",
+      "twitter:description": "Prime Minister Tony Blair has singled out Iraq as a threat to world stability, accusing it of accumulating weapons of mass destruction.Blair told the Australian Broadcasting Corp. in an television",
+      "fb:admins": "729735830",
+      "fb:app_id": "235586169789578",
+      "og:site_name": "The Independent",
+      "og:type": "article",
+      "og:locale": "en_GB",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@independent",
+      "article:section": "World Politics",
+      "article:author_name": "AP",
+      "article:content_type": "story",
+      "article:word_count": "361",
+      "article:image_count": "1",
+      "article:video_count": "0",
+      "article:embed_count": "0",
+      "article:internal_link_count": "0",
+      "article:external_link_count": "0",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-title": "Independent"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://img.apester.com/insecure/fit/700/0/ce/0/plain/user-images%2F09%2F093d495b3201bcddbea4468062112144.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}
+[0m
+[2019-10-20 09:02:23,284] {logging_mixin.py:95} INFO - [[34m2019-10-20 09:02:23,283[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

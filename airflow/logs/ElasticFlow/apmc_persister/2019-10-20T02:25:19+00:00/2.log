@@ -1,0 +1,76 @@
+[2019-10-20 08:01:26,620] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.apmc_persister 2019-10-20T02:25:19+00:00 [queued]>
+[2019-10-20 08:01:26,632] {taskinstance.py:620} INFO - Dependencies all met for <TaskInstance: ElasticFlow.apmc_persister 2019-10-20T02:25:19+00:00 [queued]>
+[2019-10-20 08:01:26,632] {taskinstance.py:838} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 08:01:26,632] {taskinstance.py:839} INFO - Starting attempt 2 of 4
+[2019-10-20 08:01:26,632] {taskinstance.py:840} INFO - 
+--------------------------------------------------------------------------------
+[2019-10-20 08:01:26,641] {taskinstance.py:859} INFO - Executing <Task(APMCDataPersister): apmc_persister> on 2019-10-20T02:25:19+00:00
+[2019-10-20 08:01:26,641] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'ElasticFlow', 'apmc_persister', '2019-10-20T02:25:19+00:00', '--job_id', '12', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/DataCollector.py', '--cfg_path', '/var/folders/30/lgh9jnl14g37x12pqj0z2rlr0000gn/T/tmpdmmnu57a']
+[2019-10-20 08:01:27,622] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister [2019-10-20 08:01:27,622] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-10-20 08:01:27,809] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister [2019-10-20 08:01:27,809] {dagbag.py:90} INFO - Filling up the DagBag from /Users/premkumar/kreate/code/pipeline/airflow/dags/DataCollector.py
+[2019-10-20 08:01:27,831] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister [2019-10-20 08:01:27,831] {cli.py:516} INFO - Running <TaskInstance: ElasticFlow.apmc_persister 2019-10-20T02:25:19+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2019-10-20 08:01:27,841] {logging_mixin.py:95} INFO - [[34m2019-10-20 08:01:27,841[0m] {[34mDataPersistorPlugin.py:[0m22} INFO[0m - APMCDataPersister Initiated[0m
+[2019-10-20 08:01:27,864] {logging_mixin.py:95} INFO - [[34m2019-10-20 08:01:27,863[0m] {[34mDataPersistorPlugin.py:[0m28} INFO[0m - Dataframe from raw json :          id        state    apmc  ...  created_at status Commodity_Uom
+0    391969  MAHARASHTRA  NAGPUR  ...  2019-08-29      1           Qui
+1    366975  MAHARASHTRA  NAGPUR  ...  2019-08-14      1           Qui
+2    390316  MAHARASHTRA  NAGPUR  ...  2019-08-28      1           Qui
+3    374766  MAHARASHTRA  NAGPUR  ...  2019-08-07      1           Qui
+4    360779  MAHARASHTRA  NAGPUR  ...  2019-08-20      1           Qui
+..      ...          ...     ...  ...         ...    ...           ...
+232  355287  MAHARASHTRA  NAGPUR  ...  2019-08-24      1           Qui
+233  366205  MAHARASHTRA  NAGPUR  ...  2019-08-15      1           Qui
+234  369993  MAHARASHTRA  NAGPUR  ...  2019-08-11      1           Qui
+235  377680  MAHARASHTRA  NAGPUR  ...  2019-08-05      1           Qui
+236  378638  MAHARASHTRA  NAGPUR  ...  2019-08-04      1           Qui
+
+[237 rows x 12 columns][0m
+[2019-10-20 08:01:27,864] {taskinstance.py:1051} ERROR - Invalid input of type: 'DataFrame'. Convert to a byte, string or number first.
+Traceback (most recent call last):
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 926, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/premkumar/kreate/code/pipeline/airflow/plugins/DataPersistorPlugin.py", line 29, in execute
+    cache.set("apmc",value)
+  File "/Users/premkumar/kreate/code/pipeline/airflow/dags/cache_util.py", line 9, in set
+    r.set(key,value)
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/client.py", line 1519, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/client.py", line 838, in execute_command
+    conn.send_command(*args)
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 686, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 737, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 118, in encode
+    "byte, string or number first." % typename)
+redis.exceptions.DataError: Invalid input of type: 'DataFrame'. Convert to a byte, string or number first.
+[2019-10-20 08:01:27,866] {taskinstance.py:1074} INFO - Marking task as UP_FOR_RETRY
+[2019-10-20 08:01:27,877] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister Traceback (most recent call last):
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/bin/airflow", line 32, in <module>
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     args.func(args)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     return f(*args, **kwargs)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/bin/cli.py", line 522, in run
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     _run(args, dag, ti)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/bin/cli.py", line 440, in _run
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     pool=args.pool,
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/utils/db.py", line 74, in wrapper
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     return func(*args, **kwargs)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 926, in _run_raw_task
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     result = task_copy.execute(context=context)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/code/pipeline/airflow/plugins/DataPersistorPlugin.py", line 29, in execute
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     cache.set("apmc",value)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/code/pipeline/airflow/dags/cache_util.py", line 9, in set
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     r.set(key,value)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/client.py", line 1519, in set
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     return self.execute_command('SET', *pieces)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/client.py", line 838, in execute_command
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     conn.send_command(*args)
+[2019-10-20 08:01:27,878] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 686, in send_command
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     self.send_packed_command(self.pack_command(*args),
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 737, in pack_command
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     for arg in imap(self.encoder.encode, args):
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister   File "/Users/premkumar/kreate/airflow_venv/lib/python3.7/site-packages/redis/connection.py", line 118, in encode
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister     "byte, string or number first." % typename)
+[2019-10-20 08:01:27,879] {base_task_runner.py:115} INFO - Job 12: Subtask apmc_persister redis.exceptions.DataError: Invalid input of type: 'DataFrame'. Convert to a byte, string or number first.
+[2019-10-20 08:01:31,621] {logging_mixin.py:95} INFO - [[34m2019-10-20 08:01:31,620[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 1[0m
